@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/leaf-solid.ico" />
+    <script src="https://kit.fontawesome.com/6f82a4b872.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -24,9 +26,55 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <style>
+      img 
+      {
+      width: 100%;
+      }
+      
+      li.nav-item
+      {
+      height: 45px;
+      }
+      
+      .jumbotron
+      {
+      margin-bottom: 0; 
+      background-color: #18800d; 
+      color: #b6ebb0;
+      border-radius: 0;
+      }
+      
+      </style>
+    <title>Project Green</title>
   </head>
   <body>
+    <h1 class = "jumbotron text-center display-2 margin">Project Green</h1>
+
+<!--Navigation Bar--> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" style = "line-height: inherit;">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+	  <!--Home Icon-->
+        <a class="nav-link" href="#"><p>Home</p></a>
+      </li>
+      <li class="nav-item">
+	  <!--Tables/Forms Icon -->
+        <a class="nav-link" href="#"><p>Redeem</p></a>
+      </li>
+      <li class="nav-item">
+	  <!--Navigation Bar Icon --> 
+        <a class="nav-link" href="#"><p>Account</p></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<br>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,5 +87,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>Copyright &copy; Your Website</small>
+      </div>
+    </footer>
+  <!-- bootstrap js scripts-->
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
   </body>
 </html>
