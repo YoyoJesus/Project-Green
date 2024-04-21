@@ -83,22 +83,31 @@
     <div class = "container">
       <!--Intro into pros and cons of bootstrap-->
       
-      <p class = "lead">Our plan to accomplish our goals is to utilize AI to accruately catalogue any items thrown awayu </p>
+      <p class = "lead">Our plan to accomplish our goals is to utilize AI to accruately catalogue any items thrown away </p>
       <br>
-      <h1>Live Video Feed</h1>
-      <img src="{{ url_for('video_feed') }}" style="width: 100%;">
+      <h1>Live Video Feed!</h1>
       <br>
-      <script src="jquery-3.7.1.min.js"></script>
+      
+
+      <!-- Viedo feed from user -->
+      <video id="video" width="640" height="480" autoplay></video>
+      
       <script>
-      function goPython (){
-        $.ajax({
-        url: "script.py",
-        context: document.body
-        }).done(function() {
-        alert('finished python script');;
+        // JavaScript code to access the camera and display live video
+        navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          var video = document.getElementById('video');
+          video.srcObject = stream;
+          video.play();
+        })
+        .catch(function(err) {
+          console.log('Error accessing camera:', err);
         });
-        }
-</script>        <!--Table with header text-->
+      </script>
+      
+
+
+      <!--Table with header text-->
       <h4 class = "text-center display-4">Lorem Ipsum</h4>
       <br>
       <table class="table">
