@@ -6,7 +6,7 @@ camera = cv2.VideoCapture(0)
 
 @app.route('/')
 def index():
-    return render_template('machine.html')
+    return render_template('index.html')
 
 def gen_frames():
     while True:
