@@ -80,26 +80,22 @@
 
 <br>
 
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
     <div class = "container">
       <!--Intro into pros and cons of bootstrap-->
-      <h4 class = " text-center display-4">Lorem Ipsum</h4>
-      <br> 
-      <p class = "lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet porttitor eget dolor morbi non. In vitae turpis massa sed. Dis parturient montes nascetur ridiculus mus mauris. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Ultrices in iaculis nunc sed augue lacus. Viverra maecenas accumsan lacus vel facilisis volutpat est. Augue eget arcu dictum varius duis at consectetur. Dictum sit amet justo donec enim diam vulputate. Odio ut sem nulla pharetra. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque.</p>
+      
+      <p class = "lead">Our plan to accomplish our goals is to utilize AI to accruately catalogue any items thrown awayu </p>
       <br>
-      <!--Table with header text-->
+      <script src="jquery-3.7.1.min.js"></script>
+      <scripts>
+      function goPython (){
+        $.ajax({
+        url: "script.py",
+        context: document.body
+        }).done(function() {
+        alert('finished python script');;
+        });
+        }
+</scripts>        <!--Table with header text-->
       <h4 class = "text-center display-4">Lorem Ipsum</h4>
       <br>
       <table class="table">
