@@ -49,60 +49,33 @@
     <title>Project Green</title>
   </head>
   <body>
-    <h1 class = "jumbotron text-center display-2 margin">Project Green</h1>
-
-<!--Navigation Bar--> 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav" style = "line-height: inherit;">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-	  <!--Home Icon-->
-        <a class="nav-link" href="index.html"><p>Home</p></a>
-      </li>
-      <li class="nav-item">
-	  <!--Tables/Forms Icon -->
-        <a class="nav-link" href="redeem.html"><p>Redeem</p></a>
-      </li>
-      <li class="nav-item">
-	  <!--Navigation Bar Icon --> 
-        <a class="nav-link" href="account.html"><p>Account</p></a>
-      </li>
-      <li class="nav-item">
-        <!--Navigation Bar Icon --> 
-            <a class="nav-link" href="machine.html"><p>Machine Learning</p></a>
-          </li>
-    </ul>
-  </div>
-</nav>
-<br>
-<div>
-    <h1>Live Video Feed</h1>
-    <img src="{{ url_for('video_feed') }}" style="width: 100%;">
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  
-</div>
+    <div>
+    <h1>Account Balance: <span id="variableValue"></span></h1>
+    </div>
     <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
       <div class="container text-center">
         <small>Project Green | KHE 2024</small>
       </div>
     </footer>
-  <!-- bootstrap js scripts-->
   
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      // Function to fetch the variable value from the server
+      const fetchVariable = async () => {
+        try {
+          const response = await fetch('http://localhost:3001/variable');
+          const data = await response.text();
+          document.getElementById('variableValue').textContent = data;
+        } catch (error) {
+          console.error('Error fetching variable:', error);
+        }
+      };
   
+      // Fetch the variable value when the page loads
+      window.onload = fetchVariable;
+  
+      // Optionally, you can fetch the variable value periodically
+      setInterval(fetchVariable, 5000);
+    </script>
   </body>
+  
 </html>
