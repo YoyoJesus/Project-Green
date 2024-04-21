@@ -90,20 +90,7 @@
       
 
       <!-- Viedo feed from user -->
-      <video id="video" width="640" height="480" autoplay></video>
-      
-      <script>
-        // JavaScript code to access the camera and display live video
-        navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function(stream) {
-          var video = document.getElementById('video');
-          video.srcObject = stream;
-          video.play();
-        })
-        .catch(function(err) {
-          console.log('Error accessing camera:', err);
-        });
-      </script>
+      <img style="width: 300px; height: auto;" src="http://127.0.0.1:5000/video_feed" />
       
 
 
